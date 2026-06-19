@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áreas - Smart Systems UNSIJ</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+ <header class="navbar">
+        <div class="logo">
+            <h2>Smart Systems <span>UNSIJ</span></h2>
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" >Inicio</a></li>
+                <li><a href="instalaciones.html">Instalaciones</a></li>
+                <li><a href="plan-estudios.html">Plan de estudios</a></li>
+                <li><a href="areas.html" class="active">Áreas</a></li>
+            </ul>
+        </nav>
+
+        <a href="https://aula.unsij.edu.mx/" >Plataforma Moodle</a>
+    </header>
+
+    <main>
+        <h1>Áreas de Especialización</h1>
+        <p>Descubre los pilares de nuestra carrera.</p>
+
+        <section class="flex-areas">
+            <article class="area-item">
+                <h3>Inteligencia Artificial</h3>
+                <p>Modelos predictivos, redes neuronales y análisis de datos.</p>
+            </article>
+
+            <article class="area-item">
+                <h3>Ingeniería de Software</h3>
+                <p>Desarrollo de sistemas robustos y metodologías ágiles.</p>
+            </article>
+
+            <article class="area-item">
+                <h3>Ciberseguridad</h3>
+                <p>Protección de infraestructuras y análisis de vulnerabilidades.</p>
+            </article>
+
+            <article class="area-item">
+                <h3>Robótica</h3>
+                <p>Hardware y software para sistemas autónomos.</p>
+            </article>
+        </section>
+        
+        <section class="formulario-contacto">
+            <h2>¿Te interesa recibir más información?</h2>
+            <form onsubmit="validarFormulario(event)">
+                <input type="text" id="nombre" placeholder="Ingresa tu nombre completo" required>
+                <input type="email" id="correo" placeholder="Ingresa tu correo electrónico" required>
+                <button type="submit" class="boton">Enviar solicitud</button>
+            </form>
+        </section>
+
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
