@@ -1,59 +1,112 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Systems UNSIJ</title>
+    <title>Inicio - Smart Systems UNSIJ</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-    <header class="navbar">
+ <header class="navbar">
         <div class="logo">
             <h2>Smart Systems <span>UNSIJ</span></h2>
         </div>
 
         <nav>
             <ul class="nav-links">
-                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="index.html"  class="active" >Inicio</a></li>
                 <li><a href="instalaciones.html">Instalaciones</a></li>
                 <li><a href="plan-estudios.html">Plan de estudios</a></li>
-                <li><a href="areas">Áreas</a></li>
+                <li><a href="areas.html">Áreas</a></li>
             </ul>
         </nav>
 
-        <a href="https://aula.unsij.edu.mx/" >Plataforma Moodle</a>
+        <a  class="boton-nav" href="https://aula.unsij.edu.mx/" >Plataforma Moodle</a>
     </header>
 
-    <main>
-        <section id="inicio" class="hero">
-            <div class="hero-text">
-                <span class="badge">INGENIERÍA DEL FUTURO</span>
+    <main class="fondo-claro">
+        
+        <section class="hero-inicio">
+            <div class="texto-hero">
+                <span class="etiqueta-hero">✔️ EXCELENCIA ACADÉMICA</span>
                 <h1>Ingeniería en Desarrollo de Software y Sistemas Inteligentes</h1>
-                <p>Formar profesionales altamente competitivos en el desarrollo de software y sistemas inteligentes,
-                    capaces de innovar y liderar la transformación digital en la región y el país.</p>
+                <p>Formar profesionales altamente competitivos en el desarrollo de software y sistemas inteligentes, capaces de innovar y liderar la transformación digital en la región y el país.</p>
+                
+                <div class="botones-hero">
+                    <a href="plan-estudios.html" class="boton-azul">VER PLAN DE ESTUDIOS ➔</a>
+                    <a href="#" class="boton-borde">ADMISIONES 2026</a>
+                </div>
+            </div>
+            <div class="espacio-imagen"></div>
+        </section>
 
+        <section class="tres-tarjetas">
+            <div class="tarjeta-simple">
+                <div class="icono">🎯</div>
+                <h3>Objetivo</h3>
+                <p>Formar profesionales íntegros en Ingeniería en Desarrollo de Software y Sistemas Inteligentes, con capacidades para diseñar, implementar y gestionar soluciones.</p>
+            </div>
+            <div class="tarjeta-simple">
+                <div class="icono">🚀</div>
+                <h3>Misión</h3>
+                <p>Proveer una educación de calidad que fomente la investigación, el desarrollo tecnológico y la innovación en el área de sistemas inteligentes.</p>
+            </div>
+            <div class="tarjeta-simple">
+                <div class="icono">👁️</div>
+                <h3>Visión</h3>
+                <p>Ser un programa educativo referente a nivel nacional e internacional, reconocido por la excelencia de sus egresados y su impacto en la creación de software.</p>
+            </div>
+        </section>
 
-                <p>Formar profesionales altamente competitivos.</p>
+        <section class="seccion-labs">
+            <div class="caja-azul-labs">
+                <span>INSTALACIONES</span>
+                <h2>Laboratorios Especializados</h2>
+            </div>
+            <div class="texto-labs">
+                <h2>Impulsa tu creatividad técnica</h2>
+                <p>Nuestra infraestructura está diseñada para facilitar el aprendizaje práctico en áreas críticas de la tecnología moderna.</p>
+                <ul class="lista-labs">
+                    <li>✔️</li>
+                    <li>✔️</li>
+                    <li>✔️</li>
+                </ul>
+            </div>
+        </section>
 
-                <button class="boton" onclick="saludar()">Probar JavaScript</button>
-
-                <div class="caja-imagen"></div>
-                <div class="hero-buttons">
-                    <a href="plan-estudios.html">Ver plan de estudios</a>
-                    <a href="#contacto">Agendar cita</a>
+        <section class="seccion-contacto">
+            <div class="info-contacto">
+                <h2>Contáctanos</h2>
+                <p>¿Tienes dudas sobre el proceso de ingreso o nuestro programa? Estamos para apoyarte.</p>
+                
+                <div class="dato-contacto">
+                    <strong>👤 JEFA DE CARRERA</strong>
+                    <span>Dra. Mireya López Luna</span>
+                </div>
+                <div class="dato-contacto">
+                    <strong>✉️ CORREO ELECTRÓNICO</strong>
+                    <span>informatica@unsij.edu.mx</span>
+                </div>
+                <div class="dato-contacto">
+                    <strong>📞 TELÉFONOS</strong>
+                    <span>951 553 6362 ext. 201</span>
                 </div>
             </div>
 
-            <div class="hero-image">
-                <div class="placeholder-box"></div>
+            <div class="formulario-oscuro">
+                <p>Solicitar información</p>
+                <form onsubmit="validarFormulario(event)">
+                    <input type="text" id="nombre" placeholder="Nombre completo" required>
+                    <input type="email" id="correo" placeholder="Correo electrónico" required>
+                    <textarea id="duda" placeholder="¿Cuál es tu duda?" rows="4" required></textarea>
+                    <button type="submit">ENVIAR MENSAJE</button>
+                </form>
             </div>
         </section>
+
     </main>
 
     <script src="js/main.js"></script>
 </body>
-
 </html>

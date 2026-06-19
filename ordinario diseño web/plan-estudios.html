@@ -22,35 +22,108 @@
             </ul>
         </nav>
 
-        <a href="https://aula.unsij.edu.mx/" >Plataforma Moodle</a>
+        <a  class="boton-nav" href="https://aula.unsij.edu.mx/" >Plataforma Moodle</a>
     </header>
 
-    <main>
-        <h1>Plan de Estudios</h1>
-        <p>Explora las materias oficiales para la carrera en Ingeniería en Sistemas Inteligentes.</p>
-
-        <section class="grid-materias">
+    <main class="fondo-claro">
+        <section class="encabezado-plan">
+            <span class="etiqueta">INGENIERÍA DEL FUTURO</span>
+            <h1>Plan de Estudios</h1>
+            <p>Explora el plan de estudios oficial para la carrera en Ingeniería en Sistemas Inteligentes. Un programa robusto diseñado para los desafíos de la industria 4.0.</p>
             
-            <div class="tarjeta-materia" onclick="verDetalles('Programación Estructurada')">
-                <h3>Programación Estructurada</h3>
-                <p>Materia Oficial - Semestre 1</p>
+            <div class="cajas-info">
+                <div class="caja">
+                    <strong>🎓 9 Semestres</strong>
+                    <span>Duración Total</span>
+                </div>
+                <div class="caja">
+                    <strong>⚙️ Créditos Oficiales</strong>
+                    <span>Plan de Estudios 2024</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="estructura-academica">
+            <div class="titulo-centro">
+                <h2>Estructura Académica</h2>
+                <p>Selecciona un semestre para ver las asignaturas correspondientes.</p>
             </div>
 
-            <div class="tarjeta-materia" onclick="verDetalles('Lógica Matemática')">
-                <h3>Lógica Matemática</h3>
-                <p>Materia Oficial - Semestre 1</p>
+            <div class="linea-tiempo">
+                <div class="semestre activo">
+                    1<span>Sem</span>
+                </div>
+                <div class="semestre">
+                    2<span>Sem</span>
+                </div>
+                <div class="semestre">
+                    3<span>Sem</span>
+                </div>
+                <div class="semestre">
+                    4<span>Sem</span>
+                </div>
+                <div class="semestre">
+                    5<span>Sem</span>
+                </div>
+                <div class="semestre">
+                    6<span>Sem</span>
+                </div>
+                <div class="semestre">
+                    7<span>Sem</span>
+                </div>
+                <div class="semestre">
+                    8<span>Sem</span>
+                </div>
+                <div class="semestre">
+                    9<span>Sem</span>
+                </div>
             </div>
 
-            <div class="tarjeta-materia" onclick="verDetalles('Cálculo I')">
-                <h3>Cálculo I</h3>
-                <p>Materia Oficial - Semestre 1</p>
-            </div>
+            <div class="grid-materias-nuevo">
+                
+                <div class="tarjeta-mat" onclick="verDetalles('Programación Estructurada')">
+                    <span class="categoria">PROGRAMACIÓN</span>
+                    <h3>Programación Estructurada</h3>
+                    <span class="check">✔️ MATERIA OFICIAL</span>
+                </div>
 
-            <div class="tarjeta-materia" onclick="verDetalles('Física I')">
-                <h3>Física I</h3>
-                <p>Materia Oficial - Semestre 1</p>
-            </div>
+                <div class="tarjeta-mat" onclick="verDetalles('Lógica Matemática')">
+                    <span class="categoria">MATEMÁTICAS</span>
+                    <h3>Lógica Matemática</h3>
+                    <span class="check">✔️ MATERIA OFICIAL</span>
+                </div>
 
+                <div class="tarjeta-mat" onclick="verDetalles('Cálculo I')">
+                    <span class="categoria">MATEMÁTICAS</span>
+                    <h3>Cálculo I</h3>
+                    <span class="check">✔️ MATERIA OFICIAL</span>
+                </div>
+
+                <div class="tarjeta-mat" onclick="verDetalles('Física I')">
+                    <span class="categoria">CIENCIAS</span>
+                    <h3>Física I</h3>
+                    <span class="check">✔️ MATERIA OFICIAL</span>
+                </div>
+
+                <div class="tarjeta-mat" onclick="verDetalles('Metodología de la Investigación')">
+                    <span class="categoria">INVESTIGACIÓN</span>
+                    <h3>Metodología de la Investigación</h3>
+                    <span class="check">✔️ MATERIA OFICIAL</span>
+                </div>
+
+                <div class="tarjeta-mat" onclick="verDetalles('Administración')">
+                    <span class="categoria">GESTIÓN</span>
+                    <h3>Administración</h3>
+                    <span class="check">✔️ MATERIA OFICIAL</span>
+                </div>
+
+                <div class="tarjeta-mat" onclick="verDetalles('Historia del Pensamiento Filosófico')">
+                    <span class="categoria">HUMANÍSTICA</span>
+                    <h3>Historia del Pensamiento Filosófico</h3>
+                    <span class="check">✔️ MATERIA OFICIAL</span>
+                </div>
+
+            </div>
         </section>
     </main>
 
