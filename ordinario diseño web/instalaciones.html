@@ -1,110 +1,156 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instalaciones - Smart Systems UNSIJ</title>
+    <title>Instalaciones - Universidad de la Sierra Juárez | IDSSI</title>
+
+    <link rel="icon" type="image/png" href="img/icon.png">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-     <header class="navbar">
-        <div class="logo">
-            <h2>Smart Systems <span>UNSIJ</span></h2>
-        </div>
 
+<body>
+
+
+    <header class="menu-principal">
+        <div class="logo">
+            <img src="img/logo-unsij.png" alt="Logo UNSIJ" class="icono-logo">
+            <h2>UNSIJ <span class="logo-secundario">| IDSSI</span></h2>
+        </div>
         <nav>
-            <ul class="nav-links">
-                <li><a href="index.html" >Inicio</a></li>
-                <li><a href="instalaciones.html" class="active">Instalaciones</a></li>
-                <li><a href="plan-estudios.html" >Plan de estudios</a></li>
+            <ul class="enlaces-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="instalaciones.html" class="activo">Instalaciones</a></li>
+                <li><a href="plan-estudios.html">Plan de Estudios</a></li>
                 <li><a href="areas.html">Áreas</a></li>
             </ul>
         </nav>
-
-        <a  class="boton-nav" href="https://aula.unsij.edu.mx/" >Plataforma Moodle</a>
+        <a href="https://aula.unsij.edu.mx/moodle/my/index.php" class="boton boton-principal">Portal Estudiantil</a>
     </header>
 
     <main>
-        
-        <section class="hero-instalaciones fondo-blanco">
-            <span class="etiqueta-gris">INFRAESTRUCTURA TECNOLÓGICA</span>
+        <!-- LABORATORIOS PRINCIPALES -->
+        <section class="contenedor centrar-texto">
             <h1>Espacios para la Innovación</h1>
-            <p>Laboratorios especializados de última generación para la formación en Ingeniería en Desarrollo de Software y Sistemas Inteligentes.</p>
-            
-            <div class="botones-hero">
-                <a href="#" class="boton-azul-oscuro">EXPLORAR SALAS</a>
-                <a href="#" class="boton-borde-claro">VER GALERÍA</a>
+            <p class="subtitulo">Laboratorios y aulas equipadas con tecnología de vanguardia para impulsar el desarrollo
+                académico y la investigación en software y sistemas inteligentes.</p>
+
+            <div class="columna-doble margen-arriba" style="text-align: left;">
+
+                <article class="tarjeta">
+                    <div class="cuadro-imagen" style="min-height: 220px; margin-bottom: 20px;">
+                        [Fotografía Laboratorio IA]
+                    </div>
+                    <h3 style="display: flex; align-items: center; gap: 8px;">🧠 Inteligencia Artificial y Electrónica
+                    </h3>
+                    <p style="color: #6b7280; font-size: 15px;">Espacio diseñado para la experimentación con hardware y
+                        algoritmos de machine learning.</p>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="cuadro-imagen" style="min-height: 220px; margin-bottom: 20px;">
+                        [Fotografía Sala de Redes]
+                    </div>
+                    <h3 style="display: flex; align-items: center; gap: 8px;">🔌 Redes</h3>
+                    <p style="color: #6b7280; font-size: 15px;">Infraestructura para el diseño, simulación y
+                        administración de redes de datos complejas.</p>
+                </article>
+
             </div>
         </section>
 
-        <section class="seccion-bloque fondo-claro">
-            <div class="titulo-con-linea">
-                <h3>Laboratorios de Especialidad</h3>
-                <div class="linea-azul"></div>
-                <p>Entornos controlados para la investigación avanzada en hardware y redes.</p>
-            </div>
+        <!-- AULAS DE CÓMPUTO -->
+        <section class="contenedor centrar-texto fondo-variante">
 
-            <div class="grid-labs-grandes">
-                <div class="tarjeta-lab-grande">
-                    <div class="contenido-abajo">
-                        <h4>🧠 Inteligencia Artificial</h4>
-                        <p>Desarrollo de redes neuronales, visión computacional y sistemas embebidos de alto rendimiento.</p>
+            <h2>Salas de Cómputo</h2>
+
+            <div class="columna-cuadruple margen-arriba" style="text-align: left;">
+
+                <div class="tarjeta" style="padding: 25px 20px;">
+                    <h3 style="margin-bottom: 5px; font-family: Arial, sans-serif;">💻 Sala 01</h3>
+                    <span class="etiqueta-carrera"
+                        style="background-color: #e5e7eb; color: #6b7280; margin-bottom: 20px;">Desarrollo Web</span>
+
+                    <div class="lista-especificaciones">
+                        <div class="dato-tecnico"><span>Estaciones:</span> <strong>30</strong></div>
+                        <div class="dato-tecnico"><span>Procesador:</span> <strong>Core i7</strong></div>
+                        <div class="dato-tecnico"><span>RAM:</span> <strong>16GB</strong></div>
                     </div>
                 </div>
-                
-                <div class="tarjeta-lab-grande">
-                    <div class="contenido-abajo">
-                        <h4>🔌 Redes & Telecom</h4>
-                        <p>Estudio de topologías críticas, ciberseguridad y protocolos de comunicación industrial.</p>
+
+                <div class="tarjeta" style="padding: 25px 20px;">
+                    <h3 style="margin-bottom: 5px; font-family: Arial, sans-serif;">🎛️ Sala 02</h3>
+                    <span class="etiqueta-carrera"
+                        style="background-color: #e5e7eb; color: #6b7280; margin-bottom: 20px;">Sistemas
+                        Embebidos</span>
+
+                    <div class="lista-especificaciones">
+                        <div class="dato-tecnico"><span>Estaciones:</span> <strong>25</strong></div>
+                        <div class="dato-tecnico"><span>Procesador:</span> <strong>Ryzen 7</strong></div>
+                        <div class="dato-tecnico"><span>RAM:</span> <strong>32GB</strong></div>
                     </div>
                 </div>
+
+                <div class="tarjeta" style="padding: 25px 20px;">
+                    <h3 style="margin-bottom: 5px; font-family: Arial, sans-serif;">🗄️ Sala 03</h3>
+                    <span class="etiqueta-carrera"
+                        style="background-color: #e5e7eb; color: #6b7280; margin-bottom: 20px;">Bases de Datos</span>
+
+                    <div class="lista-especificaciones">
+                        <div class="dato-tecnico"><span>Estaciones:</span> <strong>30</strong></div>
+                        <div class="dato-tecnico"><span>Procesador:</span> <strong>Core i7</strong></div>
+                        <div class="dato-tecnico"><span>RAM:</span> <strong>16GB</strong></div>
+                    </div>
+                </div>
+
+                <div class="tarjeta" style="padding: 25px 20px;">
+                    <h3 style="margin-bottom: 5px; font-family: Arial, sans-serif;">⚡ Sala 04</h3>
+                    <span class="etiqueta-carrera"
+                        style="background-color: #e5e7eb; color: #6b7280; margin-bottom: 20px;">Programación
+                        Avanzada</span>
+
+                    <div class="lista-especificaciones">
+                        <div class="dato-tecnico"><span>Estaciones:</span> <strong>40</strong></div>
+                        <div class="dato-tecnico"><span>Procesador:</span> <strong>Core i9</strong></div>
+                        <div class="dato-tecnico"><span>RAM:</span> <strong>32GB</strong></div>
+                    </div>
+                </div>
+
             </div>
         </section>
-
-        <section class="seccion-bloque fondo-blanco centro">
-            <h3 class="texto-azul">Salas de Cómputo</h3>
-            <p class="texto-gris">4 estaciones de trabajo de alto rendimiento optimizadas para el desarrollo de software.</p>
-
-            <div class="grid-salas">
-                <div class="tarjeta-sala">
-                    <span class="icono-sala">💻</span>
-                    <p>Sala 01</p>
-                </div>
-                <div class="tarjeta-sala">
-                    <span class="icono-sala">⌨️</span>
-                    <p>Sala 02</p>
-                </div>
-                <div class="tarjeta-sala">
-                    <span class="icono-sala">🎛️</span>
-                    <p>Sala 03</p>
-                </div>
-                <div class="tarjeta-sala">
-                    <span class="icono-sala">☁️</span>
-                    <p>Sala 04</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="seccion-bloque fondo-claro grid-dos-columnas">
-            <div></div> 
-            
-            <div class="tarjetas-apiladas">
-                <div class="tarjeta-blanca">
-                    <span class="icono-sala">🚁</span>
-                    <h4 class="texto-azul">Drones & Robótica</h4>
-                    <p>Unidad de prototipado aéreo y sistemas autónomos.</p>
-                </div>
-                
-                <div class="tarjeta-azul-oscuro">
-                    <span class="icono-sala">⏱️</span>
-                    <h4>Impresión 3D y equipo de alto rendimiento</h4>
-                    <p>Estaciones i9 Pro con GPU RTX serie 4000 para cómputo masivo.</p>
-                </div>
-            </div>
-        </section>
-
     </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+        <div class="contenedor columna-cuadruple">
+            <div>
+                <h3>UNSIJ</h3>
+                <p>Universidad de la Sierra Juárez. Ixtlán de Juárez, Oaxaca.</p>
+            </div>
+            <div>
+                <h4>ACADÉMICO</h4>
+                <ul>
+                    <li><a href="plan-estudios.html">Plan de Estudios</a></li>
+                    <li><a href="#">Reglamento Académico</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>COMUNIDAD</h4>
+                <ul>
+                    <li><a href="#">Egresados</a></li>
+                    <li><a href="#">Bolsa de Trabajo</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>UBICACIÓN</h4>
+                <p>Av. Universidad S/N, Ixtlán de Juárez, Oaxaca, C.P. 68725</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="js/main.js"></script>
 </body>
+
 </html>

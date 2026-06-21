@@ -1,132 +1,163 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plan de Estudios - Smart Systems UNSIJ</title>
+    <title>Plan de Estudios - IDSSI UNSIJ</title>
+    <link rel="icon" type="image/png" href="img/icon.png">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
- <header class="navbar">
+    <header class="menu-principal">
         <div class="logo">
-            <h2>Smart Systems <span>UNSIJ</span></h2>
+            <img src="img/logo-unsij.png" alt="Logo UNSIJ" class="icono-logo">
+            <h2>UNSIJ <span class="logo-secundario">| IDSSI</span></h2>
         </div>
-
         <nav>
-            <ul class="nav-links">
-                <li><a href="index.html" >Inicio</a></li>
+            <ul class="enlaces-menu">
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="instalaciones.html">Instalaciones</a></li>
-                <li><a href="plan-estudios.html" class="active">Plan de estudios</a></li>
+                <li><a href="plan-estudios.html" class="activo">Plan de Estudios</a></li>
                 <li><a href="areas.html">Áreas</a></li>
             </ul>
         </nav>
-
-        <a  class="boton-nav" href="https://aula.unsij.edu.mx/" >Plataforma Moodle</a>
+        <a href="https://aula.unsij.edu.mx/moodle/my/index.php" class="boton boton-principal">Portal Estudiantil</a>
     </header>
 
-    <main class="fondo-claro">
-        <section class="encabezado-plan">
-            <span class="etiqueta">INGENIERÍA DEL FUTURO</span>
-            <h1>Plan de Estudios</h1>
-            <p>Explora el plan de estudios oficial para la carrera en Ingeniería en Sistemas Inteligentes. Un programa robusto diseñado para los desafíos de la industria 4.0.</p>
-            
-            <div class="cajas-info">
-                <div class="caja">
-                    <strong>🎓 9 Semestres</strong>
-                    <span>Duración Total</span>
+    <main>
+        <section class="contenedor columna-doble">
+            <div class="presentacion-plan">
+                <span class="etiqueta-carrera">INGENIERÍA DEL FUTURO</span>
+                <h1>Plan de Estudios</h1>
+                <p class="subtitulo" style="text-align: left; margin: 0 0 25px 0;">Explora la estructura curricular
+                    oficial para la carrera en Ingeniería en Desarrollo de Software y Sistemas Inteligentes. Un programa
+                    robusto diseñado para los desafíos de la industria 4.0.</p>
+
+                <div class="resumen-creditos">
+                    <div class="bloque-resumen">
+                        <strong>🎓 9 Semestres</strong> <br>
+                        <span>Duración Total</span>
+                    </div>
+                    <div class="bloque-resumen">
+                        <strong>⚙️ Créditos Oficiales</strong> <br>
+                        <span>Plan de Estudios 2024</span>
+                    </div>
                 </div>
-                <div class="caja">
-                    <strong>⚙️ Créditos Oficiales</strong>
-                    <span>Plan de Estudios 2024</span>
+            </div>
+            <div class="cuadro-imagen" style="min-height: 250px;">
+                [Espacio para Fotografía del Plan de Estudios]
+            </div>
+        </section>
+
+        <section class="contenedor centrar-texto" style="padding-top: 0;">
+            <h2>Estructura Académica</h2>
+            <p class="subtitulo">Selecciona un semestre para ver las asignaturas correspondientes de forma dinámica.</p>
+
+            <div class="control-cronologico margen-arriba">
+                <div class="linea-cronologica"></div>
+                <div class="navegacion-pasos">
+                    <div class="paso-tiempo" onclick="cambiarSemestre(1)">1</div>
+                    <div class="paso-tiempo" onclick="cambiarSemestre(2)">2</div>
+                    <div class="paso-tiempo" onclick="cambiarSemestre(3)">3</div>
+                    <div class="paso-tiempo" onclick="cambiarSemestre(4)">4</div>
+                    <div class="paso-tiempo" onclick="cambiarSemestre(5)">5</div>
+                    <div class="paso-tiempo" onclick="cambiarSemestre(6)">6</div>
+                    <div class="paso-tiempo" onclick="cambiarSemestre(7)">7</div>
+                    <div class="paso-tiempo" onclick="cambiarSemestre(8)">8</div>
+                    <div class="paso-tiempo" onclick="cambiarSemestre(9)">9</div>
+                </div>
+            </div>
+
+            <div id="contenedor-materias" class="columna-cuadruple margen-arriba text-left">
+            </div>
+        </section>
+
+        <section id="seccion-optativas" class="contenedor fondo-variante"
+            style="padding-top: 40px; padding-bottom: 40px; display: none;">
+            <h2 class="centrar-texto" style="margin-bottom: 5px;">Materias Optativas</h2>
+            <p class="subtitulo centrar-texto" style="margin-bottom: 30px;">Especialización en áreas avanzadas de la
+                inteligencia artificial.</p>
+
+            <div class="columna-triple">
+                <div class="tarjeta">
+                    <h4 style="margin: 0; font-family: Arial, sans-serif;">Procesamiento del Lenguaje Natural</h4>
+                </div>
+                <div class="tarjeta">
+                    <h4 style="margin: 0; font-family: Arial, sans-serif;">Programación de Robots Móviles</h4>
+                </div>
+                <div class="tarjeta">
+                    <h4 style="margin: 0; font-family: Arial, sans-serif;">Reconocimiento de Patrones</h4>
+                </div>
+            </div>
+
+            <div class="columna-doble margen-arriba" style="max-width: 730px; margin-left: auto; margin-right: auto;">
+                <div class="tarjeta">
+                    <h4 style="margin: 0; font-family: Arial, sans-serif;">Visión por Computadora y RA</h4>
+                </div>
+                <div class="tarjeta">
+                    <h4 style="margin: 0; font-family: Arial, sans-serif;">Aplicaciones de IA en Sistemas Embebidos</h4>
                 </div>
             </div>
         </section>
 
-        <section class="estructura-academica">
-            <div class="titulo-centro">
-                <h2>Estructura Académica</h2>
-                <p>Selecciona un semestre para ver las asignaturas correspondientes.</p>
-            </div>
+        <section class="contenedor" style="padding-top: 40px;">
+            <h2 class="separador-seccion" style="text-align: left; margin-bottom: 40px;">
+                <span style="padding-left: 0; background-color: #f9fafb;">Requisitos de Titulación</span>
+            </h2>
 
-            <div class="linea-tiempo">
-                <div class="semestre activo">
-                    1<span>Sem</span>
+            <div class="columna-triple">
+                <div class="tarjeta" style="background-color: #f8fafc;">
+                    <div class="emblema-requisito">🌐</div>
+                    <h4 style="margin: 10px 0; font-family: Arial, sans-serif;">Nivel de Inglés B2</h4>
+                    <p style="font-size: 13px; color: #6b7280; margin: 0;">Certificación necesaria para acceso a
+                        documentación técnica global.</p>
                 </div>
-                <div class="semestre">
-                    2<span>Sem</span>
+                <div class="tarjeta" style="background-color: #f8fafc;">
+                    <div class="emblema-requisito">💼</div>
+                    <h4 style="margin: 10px 0; font-family: Arial, sans-serif;">Estancia Profesional</h4>
+                    <p style="font-size: 13px; color: #6b7280; margin: 0;">Prácticas en entornos industriales reales
+                        durante el 9no semestre.</p>
                 </div>
-                <div class="semestre">
-                    3<span>Sem</span>
+                <div class="tarjeta" style="background-color: #f8fafc;">
+                    <div class="emblema-requisito">🤝</div>
+                    <h4 style="margin: 10px 0; font-family: Arial, sans-serif;">Servicio Social</h4>
+                    <p style="font-size: 13px; color: #6b7280; margin: 0;">Proyecto de impacto social y comunitario.</p>
                 </div>
-                <div class="semestre">
-                    4<span>Sem</span>
-                </div>
-                <div class="semestre">
-                    5<span>Sem</span>
-                </div>
-                <div class="semestre">
-                    6<span>Sem</span>
-                </div>
-                <div class="semestre">
-                    7<span>Sem</span>
-                </div>
-                <div class="semestre">
-                    8<span>Sem</span>
-                </div>
-                <div class="semestre">
-                    9<span>Sem</span>
-                </div>
-            </div>
-
-            <div class="grid-materias-nuevo">
-                
-                <div class="tarjeta-mat" onclick="verDetalles('Programación Estructurada')">
-                    <span class="categoria">PROGRAMACIÓN</span>
-                    <h3>Programación Estructurada</h3>
-                    <span class="check">✔️ MATERIA OFICIAL</span>
-                </div>
-
-                <div class="tarjeta-mat" onclick="verDetalles('Lógica Matemática')">
-                    <span class="categoria">MATEMÁTICAS</span>
-                    <h3>Lógica Matemática</h3>
-                    <span class="check">✔️ MATERIA OFICIAL</span>
-                </div>
-
-                <div class="tarjeta-mat" onclick="verDetalles('Cálculo I')">
-                    <span class="categoria">MATEMÁTICAS</span>
-                    <h3>Cálculo I</h3>
-                    <span class="check">✔️ MATERIA OFICIAL</span>
-                </div>
-
-                <div class="tarjeta-mat" onclick="verDetalles('Física I')">
-                    <span class="categoria">CIENCIAS</span>
-                    <h3>Física I</h3>
-                    <span class="check">✔️ MATERIA OFICIAL</span>
-                </div>
-
-                <div class="tarjeta-mat" onclick="verDetalles('Metodología de la Investigación')">
-                    <span class="categoria">INVESTIGACIÓN</span>
-                    <h3>Metodología de la Investigación</h3>
-                    <span class="check">✔️ MATERIA OFICIAL</span>
-                </div>
-
-                <div class="tarjeta-mat" onclick="verDetalles('Administración')">
-                    <span class="categoria">GESTIÓN</span>
-                    <h3>Administración</h3>
-                    <span class="check">✔️ MATERIA OFICIAL</span>
-                </div>
-
-                <div class="tarjeta-mat" onclick="verDetalles('Historia del Pensamiento Filosófico')">
-                    <span class="categoria">HUMANÍSTICA</span>
-                    <h3>Historia del Pensamiento Filosófico</h3>
-                    <span class="check">✔️ MATERIA OFICIAL</span>
-                </div>
-
             </div>
         </section>
     </main>
 
+    <footer class="pie-pagina">
+        <div class="contenedor columna-cuadruple">
+            <div>
+                <h3>UNSIJ</h3>
+                <p>Universidad de la Sierra Juárez. Ixtlán de Juárez, Oaxaca.</p>
+            </div>
+            <div>
+                <h4>ACADÉMICO</h4>
+                <ul>
+                    <li><a href="plan-estudios.html">Plan de Estudios</a></li>
+                    <li><a href="#">Reglamento Académico</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>COMUNIDAD</h4>
+                <ul>
+                    <li><a href="#">Egresados</a></li>
+                    <li><a href="#">Bolsa de Trabajo</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>UBICACIÓN</h4>
+                <p>Av. Universidad S/N, Ixtlán de Juárez, Oaxaca, C.P. 68725</p>
+            </div>
+        </div>
+    </footer>
+
     <script src="js/main.js"></script>
 </body>
+
 </html>

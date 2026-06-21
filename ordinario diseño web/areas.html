@@ -1,67 +1,179 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Áreas - Smart Systems UNSIJ</title>
+    <title>Áreas de Especialización - UNSIJ | IDSSI</title>
+
+    <link rel="icon" type="image/png" href="img/icon.png">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
- <header class="navbar">
+    <header class="menu-principal">
         <div class="logo">
-            <h2>Smart Systems <span>UNSIJ</span></h2>
+            <img src="img/logo-unsij.png" alt="Logo UNSIJ" class="icono-logo">
+            <h2>UNSIJ <span class="logo-secundario">| IDSSI</span></h2>
         </div>
-
         <nav>
-            <ul class="nav-links">
-                <li><a href="index.html" >Inicio</a></li>
+            <ul class="enlaces-menu">
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="instalaciones.html">Instalaciones</a></li>
-                <li><a href="plan-estudios.html">Plan de estudios</a></li>
-                <li><a href="areas.html" class="active">Áreas</a></li>
+                <li><a href="plan-estudios.html">Plan de Estudios</a></li>
+                <li><a href="areas.html" class="activo">Áreas</a></li>
             </ul>
         </nav>
-
-        <a href="https://aula.unsij.edu.mx/" >Plataforma Moodle</a>
+        <a href="https://aula.unsij.edu.mx/moodle/my/index.php" class="boton boton-principal">Portal Estudiantil</a>
     </header>
 
     <main>
-        <h1>Áreas de Especialización</h1>
-        <p>Descubre los pilares de nuestra carrera.</p>
+        <section class="contenedor centrar-texto">
+            <h1 class="separador-seccion" style="margin-top: 0;">
+                <span style="background-color: #f9fafb;">Áreas de Especialización</span>
+            </h1>
 
-        <section class="flex-areas">
-            <article class="area-item">
-                <h3>Inteligencia Artificial</h3>
-                <p>Modelos predictivos, redes neuronales y análisis de datos.</p>
-            </article>
-
-            <article class="area-item">
-                <h3>Ingeniería de Software</h3>
-                <p>Desarrollo de sistemas robustos y metodologías ágiles.</p>
-            </article>
-
-            <article class="area-item">
-                <h3>Ciberseguridad</h3>
-                <p>Protección de infraestructuras y análisis de vulnerabilidades.</p>
-            </article>
-
-            <article class="area-item">
-                <h3>Robótica</h3>
-                <p>Hardware y software para sistemas autónomos.</p>
-            </article>
+            <div class="columna-cuadruple margen-arriba" style="text-align: left;">
+                <div class="tarjeta" style="border-bottom: 4px solid #064e3b;">
+                    <div class="circulo-icono" style="height: 35px; width: 35px; font-size: 16px; margin-bottom: 15px;">
+                        🧠</div>
+                    <h4 style="margin-bottom: 5px; font-family: Arial, sans-serif;">IA</h4>
+                    <p style="font-size: 12px; color: #6b7280; margin: 0;">Machine learning y modelos predictivos.</p>
+                </div>
+                <div class="tarjeta" style="border-bottom: 4px solid #064e3b;">
+                    <div class="circulo-icono" style="height: 35px; width: 35px; font-size: 16px; margin-bottom: 15px;">
+                        💻</div>
+                    <h4 style="margin-bottom: 5px; font-family: Arial, sans-serif;">Software</h4>
+                    <p style="font-size: 12px; color: #6b7280; margin: 0;">Arquitecturas escalables y CI/CD.</p>
+                </div>
+                <div class="tarjeta" style="border-bottom: 4px solid #064e3b;">
+                    <div class="circulo-icono" style="height: 35px; width: 35px; font-size: 16px; margin-bottom: 15px;">
+                        🛡️</div>
+                    <h4 style="margin-bottom: 5px; font-family: Arial, sans-serif;">Seguridad</h4>
+                    <p style="font-size: 12px; color: #6b7280; margin: 0;">Protección de datos y redes inteligentes.</p>
+                </div>
+                <div class="tarjeta" style="border-bottom: 4px solid #064e3b;">
+                    <div class="circulo-icono" style="height: 35px; width: 35px; font-size: 16px; margin-bottom: 15px;">
+                        🤖</div>
+                    <h4 style="margin-bottom: 5px; font-family: Arial, sans-serif;">Robótica</h4>
+                    <p style="font-size: 12px; color: #6b7280; margin: 0;">Sistemas autónomos e IoT industrial.</p>
+                </div>
+            </div>
         </section>
-        
-        <section class="formulario-contacto">
-            <h2>¿Te interesa recibir más información?</h2>
-            <form onsubmit="validarFormulario(event)">
-                <input type="text" id="nombre" placeholder="Ingresa tu nombre completo" required>
-                <input type="email" id="correo" placeholder="Ingresa tu correo electrónico" required>
-                <button type="submit" class="boton">Enviar solicitud</button>
-            </form>
+
+        <section class="contenedor columna-doble" style="padding-top: 0;">
+            <div>
+                <h2 style="display: flex; align-items: center; gap: 10px;">🧠 Inteligencia Artificial</h2>
+                <p>Formamos ingenieros capaces de diseñar sistemas que imitan procesos cognitivos humanos. Nos enfocamos
+                    en la creación de modelos predictivos avanzados, procesamiento de lenguaje natural y visión
+                    computacional utilizando las arquitecturas de aprendizaje profundo más robustas de la actualidad.
+                </p>
+
+                <h5
+                    style="margin-top: 25px; margin-bottom: 10px; color: #064e3b; letter-spacing: 1px; font-family: Arial, sans-serif;">
+                    CAMPOS LABORALES</h5>
+                <span class="etiqueta-campo">Científico de Datos</span>
+                <span class="etiqueta-campo">Ingeniero de ML</span>
+                <span class="etiqueta-campo">Arquitecto de IA</span>
+                <span class="etiqueta-campo">Especialista en NLP</span>
+            </div>
+            <div class="cuadro-imagen" style="min-height: 300px;">
+                [Fotografía Alumnos con visor RA]
+            </div>
+        </section>
+
+        <section class="contenedor columna-doble" style="padding-top: 0;">
+            <div class="cuadro-imagen" style="min-height: 300px;">
+                [Fotografía Laboratorio de Cómputo]
+            </div>
+            <div>
+                <h2 style="display: flex; align-items: center; gap: 10px;">💻 Ingeniería de Software</h2>
+                <p>El corazón de los sistemas inteligentes es un software robusto. Nuestra área de especialización se
+                    centra en el ciclo de vida completo del desarrollo, desde la arquitectura de microservicios hasta la
+                    implementación continua (CI/CD) y el aseguramiento de la calidad en sistemas de misión crítica.</p>
+
+                <h5
+                    style="margin-top: 25px; margin-bottom: 10px; color: #064e3b; letter-spacing: 1px; font-family: Arial, sans-serif;">
+                    CAMPOS LABORALES</h5>
+                <span class="etiqueta-campo">Arquitecto de Software</span>
+                <span class="etiqueta-campo">DevOps Lead</span>
+                <span class="etiqueta-campo">Fullstack Expert</span>
+                <span class="etiqueta-campo">QA Automation</span>
+            </div>
+        </section>
+
+        <section class="contenedor columna-doble" style="padding-top: 0;">
+            <div>
+                <h2 style="display: flex; align-items: center; gap: 10px;">🛡️ Ciberseguridad</h2>
+                <p>Protegemos la integridad de los sistemas modernos mediante el estudio de criptografía, seguridad en
+                    redes inalámbricas y auditoría forense digital. Formamos expertos en la detección de intrusiones y
+                    respuesta ante incidentes en infraestructuras críticas.</p>
+
+                <h5
+                    style="margin-top: 25px; margin-bottom: 10px; color: #064e3b; letter-spacing: 1px; font-family: Arial, sans-serif;">
+                    CAMPOS LABORALES</h5>
+                <span class="etiqueta-campo">Analista SOC</span>
+                <span class="etiqueta-campo">Pentester</span>
+                <span class="etiqueta-campo">Auditor Forense</span>
+                <span class="etiqueta-campo">Consultor CISO</span>
+            </div>
+            <div class="cuadro-imagen" style="min-height: 300px;">
+                [Fotografía Práctica de Redes]
+            </div>
+        </section>
+
+        <section class="contenedor columna-doble" style="padding-top: 0; padding-bottom: 80px;">
+            <div class="cuadro-imagen" style="min-height: 300px;">
+                [Fotografía Perro Robot UNSIJ]
+            </div>
+            <div>
+                <h2 style="display: flex; align-items: center; gap: 10px;">🤖 Robótica y Sistemas Autónomos</h2>
+                <p>Integramos hardware y software para crear agentes físicos inteligentes. El plan de estudios cubre
+                    desde cinemática y dinámica hasta control de drones, robótica colaborativa e Internet de las Cosas
+                    (IoT) aplicada a la industria.</p>
+
+                <h5
+                    style="margin-top: 25px; margin-bottom: 10px; color: #064e3b; letter-spacing: 1px; font-family: Arial, sans-serif;">
+                    CAMPOS LABORALES</h5>
+                <span class="etiqueta-campo">Ingeniero de Robótica</span>
+                <span class="etiqueta-campo">Especialista en IoT</span>
+                <span class="etiqueta-campo">Control de Automatización</span>
+                <span class="etiqueta-campo">Desarrollador ROS</span>
+            </div>
         </section>
 
     </main>
 
+    <footer class="pie-pagina">
+        <div class="contenedor columna-cuadruple">
+            <div>
+                <h3>UNSIJ</h3>
+                <p>Universidad de la Sierra Juárez. Ixtlán de Juárez, Oaxaca.</p>
+            </div>
+            <div>
+                <h4>ACADÉMICO</h4>
+                <ul>
+                    <li><a href="plan-estudios.html">Plan de Estudios</a></li>
+                    <li><a href="#">Reglamento Académico</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>COMUNIDAD</h4>
+                <ul>
+                    <li><a href="#">Egresados</a></li>
+                    <li><a href="#">Bolsa de Trabajo</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>UBICACIÓN</h4>
+                <p>Av. Universidad S/N, Ixtlán de Juárez, Oaxaca, C.P. 68725</p>
+            </div>
+        </div>
+    </footer>
+
     <script src="js/main.js"></script>
 </body>
+
 </html>

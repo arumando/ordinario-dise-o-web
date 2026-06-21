@@ -1,112 +1,162 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio - Smart Systems UNSIJ</title>
+    <title>Inicio - Universidad de la Sierra Juárez | IDSSI</title>
+
+    <link rel="icon" type="image/png" href="img/icon.png">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
- <header class="navbar">
+    <header class="menu-principal">
         <div class="logo">
-            <h2>Smart Systems <span>UNSIJ</span></h2>
+            <img src="img/logo-unsij.png" alt="Logo UNSIJ" class="icono-logo">
+            <h2>UNSIJ <span class="logo-secundario">| IDSSI</span></h2>
         </div>
-
         <nav>
-            <ul class="nav-links">
-                <li><a href="index.html"  class="active" >Inicio</a></li>
+            <ul class="enlaces-menu">
+                <li><a href="index.html" class="activo">Inicio</a></li>
                 <li><a href="instalaciones.html">Instalaciones</a></li>
-                <li><a href="plan-estudios.html">Plan de estudios</a></li>
+                <li><a href="plan-estudios.html">Plan de Estudios</a></li>
                 <li><a href="areas.html">Áreas</a></li>
             </ul>
         </nav>
-
-        <a  class="boton-nav" href="https://aula.unsij.edu.mx/" >Plataforma Moodle</a>
+        <a href="https://aula.unsij.edu.mx/moodle/my/index.php" class="boton boton-principal">Portal Estudiantil</a>
     </header>
 
-    <main class="fondo-claro">
-        
-        <section class="hero-inicio">
-            <div class="texto-hero">
-                <span class="etiqueta-hero">✔️ EXCELENCIA ACADÉMICA</span>
-                <h1>Ingeniería en Desarrollo de Software y Sistemas Inteligentes</h1>
-                <p>Formar profesionales altamente competitivos en el desarrollo de software y sistemas inteligentes, capaces de innovar y liderar la transformación digital en la región y el país.</p>
-                
-                <div class="botones-hero">
-                    <a href="plan-estudios.html" class="boton-azul">VER PLAN DE ESTUDIOS ➔</a>
-                    <a href="#" class="boton-borde">ADMISIONES 2026</a>
+    <main>
+        <!-- PRESENTACIÓN DE LA UNIVERSIDAD -->
+        <section class="contenedor columna-doble seccion-universidad">
+            <div class="texto-presentacion">
+                <span class="etiqueta-institucional">BIENVENIDOS A LA</span>
+
+                <h1>Universidad de la Sierra Juárez</h1>
+                <p style="font-style: italic; color: #064e3b; font-weight: bold;">"Inter natura et scientia harmonia"
+                </p>
+
+                <p>Ubicada en Ixtlán de Juárez, Oaxaca. Somos una institución de educación superior comprometida con el
+                    desarrollo regional y nacional mediante la excelencia académica, la investigación científica y la
+                    innovación tecnológica.</p>
+            </div>
+
+            <div class="cuadro-imagen">
+                [Fotografía Panorámica del Campus UNSIJ]
+            </div>
+        </section>
+
+        <!-- PRESENTACIÓN DE LA CARRERA -->
+        <section class="contenedor centrar-texto seccion-carrera fondo-variante">
+            <span class="etiqueta-carrera">OFERTA EDUCATIVA DESTACADA</span>
+
+            <h2>Ingeniería en Desarrollo de Software y Sistemas Inteligentes</h2>
+
+            <p class="subtitulo">Formamos profesionales con capacidad de análisis, diseño, desarrollo e implementación
+                de soluciones tecnológicas innovadoras, combinando el rigor académico de la UNSIJ con la práctica
+                avanzada en la industria 4.0.</p>
+
+            <div class="margen-arriba">
+                <a href="plan-estudios.html" class="boton boton-principal">Explorar Plan de Estudios</a>
+                <a href="areas.html" class="boton boton-blanco-borde" style="margin-left: 10px;">Ver
+                    Especializaciones</a>
+            </div>
+        </section>
+
+        <!-- FUNDAMENTOS DE LA CARRERA -->
+        <section class="contenedor centrar-texto">
+            <h2>Fundamentos del Programa Académico</h2>
+
+            <div class="columna-triple margen-arriba">
+                <div class="tarjeta">
+                    <div class="circulo-icono">🎯</div>
+                    <h3>Objetivo</h3>
+                    <p>Formar ingenieros altamente capacitados en el desarrollo de software y sistemas basados en
+                        inteligencia artificial, capaces de diseñar soluciones tecnológicas sostenibles.</p>
+                </div>
+                <div class="tarjeta">
+                    <div class="circulo-icono">🚩</div>
+                    <h3>Misión</h3>
+                    <p>Impartir educación superior de excelencia en el área de tecnologías de la información,
+                        promoviendo la investigación aplicada y la innovación constante.</p>
+                </div>
+                <div class="tarjeta">
+                    <div class="circulo-icono">👁️</div>
+                    <h3>Visión</h3>
+                    <p>Ser un programa académico líder a nivel nacional e internacional, reconocido por la calidad de
+                        sus egresados y su contribución al avance tecnológico global.</p>
                 </div>
             </div>
-            <div class="espacio-imagen"></div>
         </section>
 
-        <section class="tres-tarjetas">
-            <div class="tarjeta-simple">
-                <div class="icono">🎯</div>
-                <h3>Objetivo</h3>
-                <p>Formar profesionales íntegros en Ingeniería en Desarrollo de Software y Sistemas Inteligentes, con capacidades para diseñar, implementar y gestionar soluciones.</p>
-            </div>
-            <div class="tarjeta-simple">
-                <div class="icono">🚀</div>
-                <h3>Misión</h3>
-                <p>Proveer una educación de calidad que fomente la investigación, el desarrollo tecnológico y la innovación en el área de sistemas inteligentes.</p>
-            </div>
-            <div class="tarjeta-simple">
-                <div class="icono">👁️</div>
-                <h3>Visión</h3>
-                <p>Ser un programa educativo referente a nivel nacional e internacional, reconocido por la excelencia de sus egresados y su impacto en la creación de software.</p>
+        <!-- CONTACTO Y ADMISIONES -->
+        <section class="contenedor">
+            <div class="caja-contacto columna-doble">
+                <div class="datos-contacto">
+                    <h2>Admisiones y Contacto</h2>
+                    <p>¿Tienes dudas sobre el proceso de ingreso a la UNSIJ o sobre nuestra Ingeniería? Estamos para
+                        apoyarte.</p>
+
+                    <div class="bloque-dato">
+                        <strong>👤 JEFA DE CARRERA</strong>
+                        <span>Dra. Mireya López Luna</span>
+                    </div>
+                    <div class="bloque-dato">
+                        <strong>✉️ CORREO ELECTRÓNICO</strong>
+                        <span>informatica@unsij.edu.mx</span>
+                    </div>
+                    <div class="bloque-dato">
+                        <strong>📞 TELÉFONOS</strong>
+                        <span>951 553 6362 ext. 201 <br> 951 553 6365 ext. 201</span>
+                    </div>
+                </div>
+
+                <div class="formulario-contacto">
+                    <p>Solicitar Información</p>
+                    <!-- mandamos a llamar a la función de tu archivo JS -->
+                    <form onsubmit="enviarFormulario(event)">
+                        <input type="text" placeholder="Nombre completo" required>
+                        <input type="email" placeholder="Correo electrónico" required>
+                        <textarea placeholder="¿Cuál es tu duda?" rows="4" required></textarea>
+                        <button type="submit" class="boton boton-blanco">ENVIAR MENSAJE</button>
+                    </form>
+                </div>
             </div>
         </section>
+    </main>
 
-        <section class="seccion-labs">
-            <div class="caja-azul-labs">
-                <span>INSTALACIONES</span>
-                <h2>Laboratorios Especializados</h2>
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+        <div class="contenedor columna-cuadruple">
+            <div>
+                <h3>UNSIJ</h3>
+                <p>Universidad de la Sierra Juárez. Ixtlán de Juárez, Oaxaca.</p>
             </div>
-            <div class="texto-labs">
-                <h2>Impulsa tu creatividad técnica</h2>
-                <p>Nuestra infraestructura está diseñada para facilitar el aprendizaje práctico en áreas críticas de la tecnología moderna.</p>
-                <ul class="lista-labs">
-                    <li>✔️</li>
-                    <li>✔️</li>
-                    <li>✔️</li>
+            <div>
+                <h4>ACADÉMICO</h4>
+                <ul>
+                    <li><a href="plan-estudios.html">Plan de Estudios</a></li>
+                    <li><a href="#">Reglamento Académico</a></li>
                 </ul>
             </div>
-        </section>
-
-        <section class="seccion-contacto">
-            <div class="info-contacto">
-                <h2>Contáctanos</h2>
-                <p>¿Tienes dudas sobre el proceso de ingreso o nuestro programa? Estamos para apoyarte.</p>
-                
-                <div class="dato-contacto">
-                    <strong>👤 JEFA DE CARRERA</strong>
-                    <span>Dra. Mireya López Luna</span>
-                </div>
-                <div class="dato-contacto">
-                    <strong>✉️ CORREO ELECTRÓNICO</strong>
-                    <span>informatica@unsij.edu.mx</span>
-                </div>
-                <div class="dato-contacto">
-                    <strong>📞 TELÉFONOS</strong>
-                    <span>951 553 6362 ext. 201</span>
-                </div>
+            <div>
+                <h4>COMUNIDAD</h4>
+                <ul>
+                    <li><a href="#">Egresados</a></li>
+                    <li><a href="#">Bolsa de Trabajo</a></li>
+                </ul>
             </div>
-
-            <div class="formulario-oscuro">
-                <p>Solicitar información</p>
-                <form onsubmit="validarFormulario(event)">
-                    <input type="text" id="nombre" placeholder="Nombre completo" required>
-                    <input type="email" id="correo" placeholder="Correo electrónico" required>
-                    <textarea id="duda" placeholder="¿Cuál es tu duda?" rows="4" required></textarea>
-                    <button type="submit">ENVIAR MENSAJE</button>
-                </form>
+            <div>
+                <h4>UBICACIÓN</h4>
+                <p>Av. Universidad S/N, Ixtlán de Juárez, Oaxaca, C.P. 68725</p>
             </div>
-        </section>
-
-    </main>
+        </div>
+    </footer>
 
     <script src="js/main.js"></script>
 </body>
+
 </html>
