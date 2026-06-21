@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
- <header class="navbar">
+     <header class="navbar">
         <div class="logo">
             <h2>Smart Systems <span>UNSIJ</span></h2>
         </div>
@@ -17,34 +16,93 @@
             <ul class="nav-links">
                 <li><a href="index.html" >Inicio</a></li>
                 <li><a href="instalaciones.html" class="active">Instalaciones</a></li>
-                <li><a href="plan-estudios.html">Plan de estudios</a></li>
+                <li><a href="plan-estudios.html" >Plan de estudios</a></li>
                 <li><a href="areas.html">Áreas</a></li>
             </ul>
         </nav>
 
-        <a href="https://aula.unsij.edu.mx/" >Plataforma Moodle</a>
+        <a  class="boton-nav" href="https://aula.unsij.edu.mx/" >Plataforma Moodle</a>
     </header>
 
     <main>
-        <h1>Espacios para la Innovación</h1>
-        <p>Conoce nuestros laboratorios y centros de cómputo.</p>
-
-        <section class="grid-instalaciones">
-            <div class="tarjeta-instalacion">
-                <h3>Laboratorio de Inteligencia Artificial</h3>
-                <div class="caja-imagen-pequena"></div>
-            </div>
-
-            <div class="tarjeta-instalacion">
-                <h3>Redes y Telecomunicaciones</h3>
-                <div class="caja-imagen-pequena"></div>
-            </div>
-
-            <div class="tarjeta-instalacion">
-                <h3>Salas de Cómputo</h3>
-                <div class="caja-imagen-pequena"></div>
+        
+        <section class="hero-instalaciones fondo-blanco">
+            <span class="etiqueta-gris">INFRAESTRUCTURA TECNOLÓGICA</span>
+            <h1>Espacios para la Innovación</h1>
+            <p>Laboratorios especializados de última generación para la formación en Ingeniería en Desarrollo de Software y Sistemas Inteligentes.</p>
+            
+            <div class="botones-hero">
+                <a href="#" class="boton-azul-oscuro">EXPLORAR SALAS</a>
+                <a href="#" class="boton-borde-claro">VER GALERÍA</a>
             </div>
         </section>
+
+        <section class="seccion-bloque fondo-claro">
+            <div class="titulo-con-linea">
+                <h3>Laboratorios de Especialidad</h3>
+                <div class="linea-azul"></div>
+                <p>Entornos controlados para la investigación avanzada en hardware y redes.</p>
+            </div>
+
+            <div class="grid-labs-grandes">
+                <div class="tarjeta-lab-grande">
+                    <div class="contenido-abajo">
+                        <h4>🧠 Inteligencia Artificial</h4>
+                        <p>Desarrollo de redes neuronales, visión computacional y sistemas embebidos de alto rendimiento.</p>
+                    </div>
+                </div>
+                
+                <div class="tarjeta-lab-grande">
+                    <div class="contenido-abajo">
+                        <h4>🔌 Redes & Telecom</h4>
+                        <p>Estudio de topologías críticas, ciberseguridad y protocolos de comunicación industrial.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion-bloque fondo-blanco centro">
+            <h3 class="texto-azul">Salas de Cómputo</h3>
+            <p class="texto-gris">4 estaciones de trabajo de alto rendimiento optimizadas para el desarrollo de software.</p>
+
+            <div class="grid-salas">
+                <div class="tarjeta-sala">
+                    <span class="icono-sala">💻</span>
+                    <p>Sala 01</p>
+                </div>
+                <div class="tarjeta-sala">
+                    <span class="icono-sala">⌨️</span>
+                    <p>Sala 02</p>
+                </div>
+                <div class="tarjeta-sala">
+                    <span class="icono-sala">🎛️</span>
+                    <p>Sala 03</p>
+                </div>
+                <div class="tarjeta-sala">
+                    <span class="icono-sala">☁️</span>
+                    <p>Sala 04</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion-bloque fondo-claro grid-dos-columnas">
+            <div></div> 
+            
+            <div class="tarjetas-apiladas">
+                <div class="tarjeta-blanca">
+                    <span class="icono-sala">🚁</span>
+                    <h4 class="texto-azul">Drones & Robótica</h4>
+                    <p>Unidad de prototipado aéreo y sistemas autónomos.</p>
+                </div>
+                
+                <div class="tarjeta-azul-oscuro">
+                    <span class="icono-sala">⏱️</span>
+                    <h4>Impresión 3D y equipo de alto rendimiento</h4>
+                    <p>Estaciones i9 Pro con GPU RTX serie 4000 para cómputo masivo.</p>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <script src="js/main.js"></script>

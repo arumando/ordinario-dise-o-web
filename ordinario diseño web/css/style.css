@@ -36,7 +36,7 @@ nav a {
     text-transform: capitalize;
 }
 
-nav a.menu-activo {
+nav a.active {
     color: #003366;
     border-bottom: 2px solid #003366;
     padding-bottom: 5px;
@@ -453,4 +453,185 @@ nav a.menu-activo {
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
+}
+
+/* ================= ESTILOS PARA LA PÁGINA DE INSTALACIONES ================= */
+
+.fondo-blanco {
+    background-color: white;
+}
+
+.seccion-bloque {
+    padding: 60px 80px;
+}
+
+.centro {
+    text-align: center;
+}
+
+/* Hero Instalaciones */
+.hero-instalaciones {
+    padding: 60px 80px;
+    text-align: left;
+}
+
+.etiqueta-gris {
+    color: #888;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.hero-instalaciones h1 {
+    color: #003366;
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+.hero-instalaciones p {
+    color: #666;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.boton-azul-oscuro {
+    background-color: #003366;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.boton-borde-claro {
+    background-color: white;
+    color: #666;
+    padding: 12px 20px;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/* Título con línea azul */
+.titulo-con-linea h3 {
+    color: #003366;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.linea-azul {
+    width: 40px;
+    height: 3px;
+    background-color: #003366;
+    margin-bottom: 15px;
+}
+
+.titulo-con-linea p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/* Tarjetas grandes de Laboratorios */
+.grid-labs-grandes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.tarjeta-lab-grande {
+    background-color: white;
+    height: 350px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Empuja el contenido hacia abajo */
+    padding: 30px;
+}
+
+.contenido-abajo h4 {
+    color: #003366;
+    margin: 0 0 10px 0;
+    font-size: 16px;
+}
+
+.contenido-abajo p {
+    color: #666;
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Salas de cómputo */
+.texto-azul {
+    color: #003366;
+}
+
+.texto-gris {
+    color: #777;
+    margin-bottom: 40px;
+}
+
+.grid-salas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.tarjeta-sala {
+    background-color: white;
+    border: 1px solid #eaeaea;
+    padding: 30px 10px;
+    border-radius: 5px;
+}
+
+.icono-sala {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.tarjeta-sala p {
+    color: #003366;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Sección Final (Drones e Impresión) */
+.grid-dos-columnas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.tarjetas-apiladas {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tarjeta-blanca {
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.tarjeta-azul-oscuro {
+    background-color: #003366;
+    color: white;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.tarjeta-blanca p, .tarjeta-azul-oscuro p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.tarjeta-azul-oscuro h4 {
+    margin: 0;
 }
