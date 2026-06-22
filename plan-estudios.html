@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plan de Estudios - IDSSI UNSIJ</title>
     <link rel="icon" type="image/png" href="img/icon.png">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -13,8 +15,10 @@
 
     <header class="menu-principal">
         <div class="logo">
-            <img src="img/logo-unsij.png" alt="Logo UNSIJ" class="icono-logo">
-            <h2>UNSIJ <span class="logo-secundario">| IDSSI</span></h2>
+            <a href="index.html" class="logo">
+                <img src="img/logo-unsij.png" alt="Logo UNSIJ" class="icono-logo">
+                <h2>UNSIJ <span class="logo-secundario">| IDSSI</span></h2>
+            </a>
         </div>
         <nav>
             <ul class="enlaces-menu">
@@ -32,23 +36,21 @@
             <div class="presentacion-plan">
                 <span class="etiqueta-carrera">INGENIERÍA DEL FUTURO</span>
                 <h1>Plan de Estudios</h1>
-                <p class="subtitulo" style="text-align: left; margin: 0 0 25px 0;">Explora la estructura curricular
-                    oficial para la carrera en Ingeniería en Desarrollo de Software y Sistemas Inteligentes. Un programa
-                    robusto diseñado para los desafíos de la industria 4.0.</p>
+                <p class="subtitulo" style="text-align: left; margin: 0 0 25px 0;">Explora la estructura curricular oficial para la carrera en Ingeniería en Desarrollo de Software y Sistemas Inteligentes. Un programa robusto diseñado para los desafíos de la industria 4.0.</p>
 
                 <div class="resumen-creditos">
                     <div class="bloque-resumen">
-                        <strong>🎓 9 Semestres</strong> <br>
+                        <strong><i class="fa-solid fa-graduation-cap"></i> 9 Semestres</strong> <br>
                         <span>Duración Total</span>
                     </div>
                     <div class="bloque-resumen">
-                        <strong>⚙️ Créditos Oficiales</strong> <br>
+                        <strong><i class="fa-solid fa-gear"></i> Créditos Oficiales</strong> <br>
                         <span>Plan de Estudios 2024</span>
                     </div>
                 </div>
             </div>
             <div class="cuadro-imagen" style="min-height: 250px;">
-                [Espacio para Fotografía del Plan de Estudios]
+                <img src="img/img8.jpg" alt="">
             </div>
         </section>
 
@@ -75,29 +77,32 @@
             </div>
         </section>
 
-        <section id="seccion-optativas" class="contenedor fondo-variante"
-            style="padding-top: 40px; padding-bottom: 40px; display: none;">
+        <section id="seccion-optativas" class="contenedor fondo-variante" style="padding-top: 40px; padding-bottom: 40px; display: none;">
             <h2 class="centrar-texto" style="margin-bottom: 5px;">Materias Optativas</h2>
-            <p class="subtitulo centrar-texto" style="margin-bottom: 30px;">Especialización en áreas avanzadas de la
-                inteligencia artificial.</p>
+            <p class="subtitulo centrar-texto" style="margin-bottom: 30px;">Especialización en áreas avanzadas de la inteligencia artificial.</p>
 
             <div class="columna-triple">
-                <div class="tarjeta">
+                <div class="tarjeta" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+                    <i class="fa-solid fa-language" style="color: #064e3b; font-size: 28px; margin-bottom: 12px;"></i>
                     <h4 style="margin: 0; font-family: Arial, sans-serif;">Procesamiento del Lenguaje Natural</h4>
                 </div>
-                <div class="tarjeta">
+                <div class="tarjeta" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+                    <i class="fa-solid fa-robot" style="color: #064e3b; font-size: 28px; margin-bottom: 12px;"></i>
                     <h4 style="margin: 0; font-family: Arial, sans-serif;">Programación de Robots Móviles</h4>
                 </div>
-                <div class="tarjeta">
+                <div class="tarjeta" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+                    <i class="fa-solid fa-fingerprint" style="color: #064e3b; font-size: 28px; margin-bottom: 12px;"></i>
                     <h4 style="margin: 0; font-family: Arial, sans-serif;">Reconocimiento de Patrones</h4>
                 </div>
             </div>
 
             <div class="columna-doble margen-arriba" style="max-width: 730px; margin-left: auto; margin-right: auto;">
-                <div class="tarjeta">
+                <div class="tarjeta" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+                    <i class="fa-solid fa-vr-cardboard" style="color: #064e3b; font-size: 28px; margin-bottom: 12px;"></i>
                     <h4 style="margin: 0; font-family: Arial, sans-serif;">Visión por Computadora y RA</h4>
                 </div>
-                <div class="tarjeta">
+                <div class="tarjeta" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+                    <i class="fa-solid fa-microchip" style="color: #064e3b; font-size: 28px; margin-bottom: 12px;"></i>
                     <h4 style="margin: 0; font-family: Arial, sans-serif;">Aplicaciones de IA en Sistemas Embebidos</h4>
                 </div>
             </div>
@@ -110,19 +115,17 @@
 
             <div class="columna-triple">
                 <div class="tarjeta" style="background-color: #f8fafc;">
-                    <div class="emblema-requisito">🌐</div>
+                    <div class="emblema-requisito"><i class="fa-solid fa-globe"></i></div>
                     <h4 style="margin: 10px 0; font-family: Arial, sans-serif;">Nivel de Inglés B2</h4>
-                    <p style="font-size: 13px; color: #6b7280; margin: 0;">Certificación necesaria para acceso a
-                        documentación técnica global.</p>
+                    <p style="font-size: 13px; color: #6b7280; margin: 0;">Certificación necesaria para acceso a documentación técnica global.</p>
                 </div>
                 <div class="tarjeta" style="background-color: #f8fafc;">
-                    <div class="emblema-requisito">💼</div>
+                    <div class="emblema-requisito"><i class="fa-solid fa-briefcase"></i></div>
                     <h4 style="margin: 10px 0; font-family: Arial, sans-serif;">Estancia Profesional</h4>
-                    <p style="font-size: 13px; color: #6b7280; margin: 0;">Prácticas en entornos industriales reales
-                        durante el 9no semestre.</p>
+                    <p style="font-size: 13px; color: #6b7280; margin: 0;">Prácticas en entornos industriales reales durante el 9no semestre.</p>
                 </div>
                 <div class="tarjeta" style="background-color: #f8fafc;">
-                    <div class="emblema-requisito">🤝</div>
+                    <div class="emblema-requisito"><i class="fa-solid fa-handshake"></i></div>
                     <h4 style="margin: 10px 0; font-family: Arial, sans-serif;">Servicio Social</h4>
                     <p style="font-size: 13px; color: #6b7280; margin: 0;">Proyecto de impacto social y comunitario.</p>
                 </div>

@@ -8,15 +8,20 @@
 
     <link rel="icon" type="image/png" href="img/icon.png">
 
+    <!-- libreria para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
+    <!-- encabezado y menu fijo -->
     <header class="menu-principal">
         <div class="logo">
-            <img src="img/logo-unsij.png" alt="Logo UNSIJ" class="icono-logo">
-            <h2>UNSIJ <span class="logo-secundario">| IDSSI</span></h2>
+            <a href="index.html" class="logo">
+                <img src="img/logo-unsij.png" alt="Logo UNSIJ" class="icono-logo">
+                <h2>UNSIJ <span class="logo-secundario">| IDSSI</span></h2>
+            </a>
         </div>
         <nav>
             <ul class="enlaces-menu">
@@ -26,10 +31,11 @@
                 <li><a href="areas.html" class="activo">Áreas</a></li>
             </ul>
         </nav>
-       <a href="https://aula.unsij.edu.mx/" target="_blank" class="boton boton-principal">Portal Estudiantil</a>
+        <a href="https://aula.unsij.edu.mx/" target="_blank" class="boton boton-principal">Portal Estudiantil</a>
     </header>
 
     <main>
+        <!-- resumen de las 4 areas principales -->
         <section class="contenedor centrar-texto">
             <h1 class="separador-seccion" style="margin-top: 0;">
                 <span style="background-color: #f9fafb;">Áreas de Especialización</span>
@@ -38,65 +44,67 @@
             <div class="columna-cuadruple margen-arriba" style="text-align: left;">
                 <div class="tarjeta" style="border-bottom: 4px solid #064e3b;">
                     <div class="circulo-icono" style="height: 35px; width: 35px; font-size: 16px; margin-bottom: 15px;">
-                        🧠</div>
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
                     <h4 style="margin-bottom: 5px; font-family: Arial, sans-serif;">IA</h4>
                     <p style="font-size: 12px; color: #6b7280; margin: 0;">Machine learning y modelos predictivos.</p>
                 </div>
                 <div class="tarjeta" style="border-bottom: 4px solid #064e3b;">
                     <div class="circulo-icono" style="height: 35px; width: 35px; font-size: 16px; margin-bottom: 15px;">
-                        💻</div>
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
                     <h4 style="margin-bottom: 5px; font-family: Arial, sans-serif;">Software</h4>
                     <p style="font-size: 12px; color: #6b7280; margin: 0;">Arquitecturas escalables y CI/CD.</p>
                 </div>
                 <div class="tarjeta" style="border-bottom: 4px solid #064e3b;">
                     <div class="circulo-icono" style="height: 35px; width: 35px; font-size: 16px; margin-bottom: 15px;">
-                        🛡️</div>
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
                     <h4 style="margin-bottom: 5px; font-family: Arial, sans-serif;">Seguridad</h4>
                     <p style="font-size: 12px; color: #6b7280; margin: 0;">Protección de datos y redes inteligentes.</p>
                 </div>
                 <div class="tarjeta" style="border-bottom: 4px solid #064e3b;">
                     <div class="circulo-icono" style="height: 35px; width: 35px; font-size: 16px; margin-bottom: 15px;">
-                        🤖</div>
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
                     <h4 style="margin-bottom: 5px; font-family: Arial, sans-serif;">Robótica</h4>
                     <p style="font-size: 12px; color: #6b7280; margin: 0;">Sistemas autónomos e IoT industrial.</p>
                 </div>
             </div>
         </section>
 
+        <!-- detalle area 1: inteligencia artificial -->
         <section class="contenedor columna-doble" style="padding-top: 0;">
             <div>
-                <h2 style="display: flex; align-items: center; gap: 10px;">🧠 Inteligencia Artificial</h2>
+                <h2 style="display: flex; align-items: center; gap: 10px;"><i class="fa-solid fa-brain"></i> Inteligencia Artificial</h2>
                 <p>Formamos ingenieros capaces de diseñar sistemas que imitan procesos cognitivos humanos. Nos enfocamos
                     en la creación de modelos predictivos avanzados, procesamiento de lenguaje natural y visión
                     computacional utilizando las arquitecturas de aprendizaje profundo más robustas de la actualidad.
                 </p>
 
-                <h5
-                    style="margin-top: 25px; margin-bottom: 10px; color: #064e3b; letter-spacing: 1px; font-family: Arial, sans-serif;">
-                    CAMPOS LABORALES</h5>
+                <h5 style="margin-top: 25px; margin-bottom: 10px; color: #064e3b; letter-spacing: 1px; font-family: Arial, sans-serif;">CAMPOS LABORALES</h5>
                 <span class="etiqueta-campo">Científico de Datos</span>
                 <span class="etiqueta-campo">Ingeniero de ML</span>
                 <span class="etiqueta-campo">Arquitecto de IA</span>
                 <span class="etiqueta-campo">Especialista en NLP</span>
             </div>
             <div class="cuadro-imagen" style="min-height: 300px;">
-                [Fotografía Alumnos con visor RA]
+                <img src="img/img1.jpg" alt="">
             </div>
         </section>
 
+        <!-- detalle area 2: ingenieria de software -->
         <section class="contenedor columna-doble" style="padding-top: 0;">
             <div class="cuadro-imagen" style="min-height: 300px;">
-                [Fotografía Laboratorio de Cómputo]
+                <img src="img/img4.jpg" alt="">
             </div>
             <div>
-                <h2 style="display: flex; align-items: center; gap: 10px;">💻 Ingeniería de Software</h2>
+                <h2 style="display: flex; align-items: center; gap: 10px;"><i class="fa-solid fa-laptop-code"></i> Ingeniería de Software</h2>
                 <p>El corazón de los sistemas inteligentes es un software robusto. Nuestra área de especialización se
                     centra en el ciclo de vida completo del desarrollo, desde la arquitectura de microservicios hasta la
                     implementación continua (CI/CD) y el aseguramiento de la calidad en sistemas de misión crítica.</p>
 
-                <h5
-                    style="margin-top: 25px; margin-bottom: 10px; color: #064e3b; letter-spacing: 1px; font-family: Arial, sans-serif;">
-                    CAMPOS LABORALES</h5>
+                <h5 style="margin-top: 25px; margin-bottom: 10px; color: #064e3b; letter-spacing: 1px; font-family: Arial, sans-serif;">CAMPOS LABORALES</h5>
                 <span class="etiqueta-campo">Arquitecto de Software</span>
                 <span class="etiqueta-campo">DevOps Lead</span>
                 <span class="etiqueta-campo">Fullstack Expert</span>
@@ -104,39 +112,37 @@
             </div>
         </section>
 
+        <!-- detalle area 3: ciberseguridad -->
         <section class="contenedor columna-doble" style="padding-top: 0;">
             <div>
-                <h2 style="display: flex; align-items: center; gap: 10px;">🛡️ Ciberseguridad</h2>
+                <h2 style="display: flex; align-items: center; gap: 10px;"><i class="fa-solid fa-shield-halved"></i> Ciberseguridad</h2>
                 <p>Protegemos la integridad de los sistemas modernos mediante el estudio de criptografía, seguridad en
                     redes inalámbricas y auditoría forense digital. Formamos expertos en la detección de intrusiones y
                     respuesta ante incidentes en infraestructuras críticas.</p>
 
-                <h5
-                    style="margin-top: 25px; margin-bottom: 10px; color: #064e3b; letter-spacing: 1px; font-family: Arial, sans-serif;">
-                    CAMPOS LABORALES</h5>
+                <h5 style="margin-top: 25px; margin-bottom: 10px; color: #064e3b; letter-spacing: 1px; font-family: Arial, sans-serif;">CAMPOS LABORALES</h5>
                 <span class="etiqueta-campo">Analista SOC</span>
                 <span class="etiqueta-campo">Pentester</span>
                 <span class="etiqueta-campo">Auditor Forense</span>
                 <span class="etiqueta-campo">Consultor CISO</span>
             </div>
             <div class="cuadro-imagen" style="min-height: 300px;">
-                [Fotografía Práctica de Redes]
+                <img src="img/img3.jpg" alt="">
             </div>
         </section>
 
+        <!-- detalle area 4: robotica -->
         <section class="contenedor columna-doble" style="padding-top: 0; padding-bottom: 80px;">
             <div class="cuadro-imagen" style="min-height: 300px;">
-                [Fotografía Perro Robot UNSIJ]
+                <img src="img/img2.jpg" alt="Perro Robot UNSIJ">
             </div>
             <div>
-                <h2 style="display: flex; align-items: center; gap: 10px;">🤖 Robótica y Sistemas Autónomos</h2>
+                <h2 style="display: flex; align-items: center; gap: 10px;"><i class="fa-solid fa-robot"></i> Robótica y Sistemas Autónomos</h2>
                 <p>Integramos hardware y software para crear agentes físicos inteligentes. El plan de estudios cubre
                     desde cinemática y dinámica hasta control de drones, robótica colaborativa e Internet de las Cosas
                     (IoT) aplicada a la industria.</p>
 
-                <h5
-                    style="margin-top: 25px; margin-bottom: 10px; color: #064e3b; letter-spacing: 1px; font-family: Arial, sans-serif;">
-                    CAMPOS LABORALES</h5>
+                <h5 style="margin-top: 25px; margin-bottom: 10px; color: #064e3b; letter-spacing: 1px; font-family: Arial, sans-serif;">CAMPOS LABORALES</h5>
                 <span class="etiqueta-campo">Ingeniero de Robótica</span>
                 <span class="etiqueta-campo">Especialista en IoT</span>
                 <span class="etiqueta-campo">Control de Automatización</span>
@@ -146,6 +152,7 @@
 
     </main>
 
+    <!-- pie de pagina -->
     <footer class="pie-pagina">
         <div class="contenedor columna-cuadruple">
             <div>
@@ -173,6 +180,7 @@
         </div>
     </footer>
 
+    <!-- script principal -->
     <script src="js/main.js"></script>
 </body>
 
