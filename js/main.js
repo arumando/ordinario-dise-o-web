@@ -94,7 +94,9 @@ window.cambiarSemestre = function(numeroSemestre) {
 function iniciarBotonAPI() {
     // creacion del boton en el dom
     const botonApi = document.createElement('button');
-    botonApi.innerText = "Clima UNSIJ"; 
+    
+    // usamos innerHTML para poder inyectar la etiqueta del icono de FontAwesome
+    botonApi.innerHTML = '<i class="fa-solid fa-cloud-sun" style="margin-right: 5px;"></i> Clima UNSIJ'; 
     
     botonApi.style.cssText = "position: fixed; bottom: 20px; right: 20px; background-color: #064e3b; color: white; border: none; padding: 12px 20px; border-radius: 50px; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.2); z-index: 2000; font-weight: bold; font-family: Arial, sans-serif; transition: all 0.3s ease;";
     
@@ -105,7 +107,8 @@ function iniciarBotonAPI() {
 
     // peticion async/await al hacer click
     botonApi.addEventListener('click', async () => {
-        botonApi.innerText = "Consultando satelite..."; 
+        // cambiamos el icono mientras carga
+        botonApi.innerHTML = '<i class="fa-solid fa-satellite-dish" style="margin-right: 5px;"></i> Consultando satelite...'; 
 
         try {
             // url de la api para ixtlan
@@ -129,7 +132,8 @@ function iniciarBotonAPI() {
             console.error(error);
             alert("Hubo un error al conectar con el servidor meteorologico. Intentalo mas tarde.");
         } finally {
-            botonApi.innerText = "Clima UNSIJ"; 
+            // restauramos el icono original cuando termina
+            botonApi.innerHTML = '<i class="fa-solid fa-cloud-sun" style="margin-right: 5px;"></i> Clima UNSIJ'; 
         }
     });
 }
