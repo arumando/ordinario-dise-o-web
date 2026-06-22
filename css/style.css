@@ -426,3 +426,53 @@ ul {
     height: 40px; /* Ajusta este número si lo quieres más grande o pequeño */
     width: auto;
 }
+
+/* ================= DISEÑO RESPONSIVO (MÓVILES Y TABLETS) ================= */
+@media (max-width: 768px) {
+    
+   
+    .columna-doble,
+    .columna-triple,
+    .columna-cuadruple {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+
+    .contenedor {
+        padding: 40px 5%;
+    }
+
+
+    .menu-principal {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .enlaces-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+  
+    .seccion-universidad h1 {
+        font-size: 32px;
+    }
+    
+    .seccion-carrera h2 {
+        font-size: 26px;
+    }
+
+  
+    .navegacion-pasos {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .linea-cronologica {
+        display: none; 
+    }
+}
