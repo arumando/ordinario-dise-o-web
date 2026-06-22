@@ -3,38 +3,69 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     // validacion de formulario y evento submit
-    const formulario = document.querySelector("form");
-    
-    if (formulario) {
-        formulario.addEventListener("submit", (evento) => {
-            // evita que la pagina se recargue de golpe
-            evento.preventDefault(); 
+// validacion de formulario y envio real a correo
+const formulario = document.getElementById("formulario-contacto");
 
-            // obtenemos los valores de los inputs
-            const nombre = formulario.querySelector('input[type="text"]').value;
-            const correo = formulario.querySelector('input[type="email"]').value;
-            const duda = formulario.querySelector('textarea').value;
+if (formulario) {
+    // nota la palabra async aqui, porque vamos a usar fetch
+    formulario.addEventListener("submit", async (evento) => {
+        // evita que la pagina se recargue
+        evento.preventDefault(); 
 
-            // validacion manual estricta
-            if (nombre.trim().length < 3) {
-                alert("Error: Por favor, ingresa un nombre válido (mínimo 3 letras).");
-                return;
+        // obtenemos los valores
+        const nombre = document.getElementById("nombre").value;
+        const correo = document.getElementById("correo").value;
+        const duda = document.getElementById("duda").value;
+
+        // validacion manual estricta
+        if (nombre.trim().length < 3) {
+            alert("Error: Por favor, ingresa un nombre válido (mínimo 3 letras).");
+            return;
+        }
+        if (!correo.includes("@") || !correo.includes(".")) {
+            alert("Error: Por favor, ingresa un correo electrónico válido.");
+            return;
+        }
+        if (duda.trim().length < 10) {
+            alert("Error: Tu duda es muy corta, por favor explícala con más detalle.");
+            return;
+        }
+
+        // cambiamos el texto del boton para que el usuario sepa que esta cargando
+        const botonSubmit = formulario.querySelector('button[type="submit"]');
+        const textoOriginal = botonSubmit.innerText;
+        botonSubmit.innerText = "ENVIANDO...";
+
+        try {
+
+            const respuesta = await fetch("https://formspree.io/f/mzdlbbzg", {
+                method: "POST",
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    nombre: nombre,
+                    correo: correo,
+                    mensaje: duda
+                })
+            });
+
+            if (respuesta.ok) {
+                alert(`¡Excelente ${nombre}! Tu mensaje ha sido enviado a la coordinación.`);
+                formulario.reset();
+            } else {
+                alert("Hubo un problema al procesar tu solicitud. Intenta nuevamente.");
             }
-            if (!correo.includes("@") || !correo.includes(".")) {
-                alert("Error: Por favor, ingresa un correo electrónico válido.");
-                return;
-            }
-            if (duda.trim().length < 10) {
-                alert("Error: Tu duda es muy corta, por favor explícala con más detalle.");
-                return;
-            }
-
-            // si pasa las validaciones exitosamente
-            alert(`¡Excelente ${nombre}! Tu mensaje ha sido enviado a la coordinación de la carrera.`);
-            formulario.reset();
-        });
-    }
-
+        } catch (error) {
+            console.error(error);
+            alert("Error de conexión. Revisa tu internet e inténtalo de nuevo.");
+        } finally {
+            // restauramos el boton
+            botonSubmit.innerText = textoOriginal;
+        }
+    });
+}
     // carga el primer semestre por defecto en el plan de estudios
     if (document.getElementById('contenedor-materias')) {
         cambiarSemestre(1); 

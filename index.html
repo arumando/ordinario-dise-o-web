@@ -105,12 +105,13 @@
 
                 <div class="formulario-contacto">
                     <p>Solicitar Información</p>
-                    <form onsubmit="enviarFormulario(event)">
-                        <input type="text" placeholder="Nombre completo" required>
-                        <input type="email" placeholder="Correo electrónico" required>
-                        <textarea placeholder="¿Cuál es tu duda?" rows="4" required></textarea>
-                        <button type="submit" class="boton boton-blanco">ENVIAR MENSAJE</button>
-                    </form>
+<!-- formulario validado con js y conectado a formspree -->
+<form id="formulario-contacto">
+    <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+    <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
+    <textarea id="duda" name="mensaje" placeholder="¿Cuál es tu duda?" rows="4" required></textarea>
+    <button type="submit" class="boton boton-blanco">ENVIAR MENSAJE</button>
+</form>
                 </div>
             </div>
         </section>
