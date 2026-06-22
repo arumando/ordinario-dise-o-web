@@ -2,20 +2,63 @@
    SCRIPT PRINCIPAL - IDSSI UNSIJ
 ========================================== */
 
-// 1. VALIDACIÓN Y ENVÍO DE FORMULARIOS (Para Inicio y Áreas)
-function enviarFormulario(evento) {
-    // Evita que la página se recargue de golpe al darle clic a "Enviar"
-    evento.preventDefault();
-    
-    // Muestra el mensaje al usuario
-    alert('¡Excelente! Tu mensaje ha sido enviado a la coordinación de la carrera. Nos pondremos en contacto contigo pronto.');
-    
-    // Limpia las cajas de texto del formulario automáticamente
-    evento.target.reset();
-}
+document.addEventListener("DOMContentLoaded", () => {
 
-// 2. MÁQUINA DEL TIEMPO (Para la página de Plan de Estudios)
-// Guardamos todo el temario en un "Objeto" o Diccionario
+    // ---------------------------------------------------------
+    // 1. VALIDACIÓN DE FORMULARIO Y EVENTO "SUBMIT"
+    // ---------------------------------------------------------
+    const formulario = document.querySelector("form");
+    
+    if (formulario) {
+        formulario.addEventListener("submit", (evento) => {
+            evento.preventDefault(); // Evita que la página se recargue de golpe
+
+            // Obtenemos los valores de los inputs
+            const nombre = formulario.querySelector('input[type="text"]').value;
+            const correo = formulario.querySelector('input[type="email"]').value;
+            const duda = formulario.querySelector('textarea').value;
+
+            // Validación manual estricta usando JavaScript
+            if (nombre.trim().length < 3) {
+                alert("Error: Por favor, ingresa un nombre válido (mínimo 3 letras).");
+                return;
+            }
+            if (!correo.includes("@") || !correo.includes(".")) {
+                alert("Error: Por favor, ingresa un correo electrónico válido.");
+                return;
+            }
+            if (duda.trim().length < 10) {
+                alert("Error: Tu duda es muy corta, por favor explícala con más detalle.");
+                return;
+            }
+
+            // Si pasa las validaciones exitosamente
+            alert(`¡Excelente ${nombre}! Tu mensaje ha sido enviado a la coordinación de la carrera.`);
+            formulario.reset();
+        });
+    }
+
+    // ---------------------------------------------------------
+    // 2. INICIALIZAR LA MÁQUINA DEL TIEMPO (Plan de Estudios)
+    // ---------------------------------------------------------
+    if (document.getElementById('contenedor-materias')) {
+        cambiarSemestre(1); // Carga el primer semestre por defecto
+    }
+
+    // ---------------------------------------------------------
+    // 3. INICIALIZAR EL BOTÓN DE LA API (Puntos Extra)
+    // ---------------------------------------------------------
+    iniciarBotonAPI();
+});
+
+
+// =========================================================
+// FUNCIONES EXTERNAS
+// =========================================================
+
+// ---------------------------------------------------------
+// MANIPULACIÓN DEL DOM: MÁQUINA DEL TIEMPO DE MATERIAS
+// ---------------------------------------------------------
 const planDeEstudios = {
     1: ["Programación Estructurada", "Lógica Matemática", "Cálculo I", "Física I", "Metodología de la Investigación", "Administración", "Historia del Pensamiento Filosófico"],
     2: ["Estructura de Datos", "Fundamentos de Electrónica", "Interacción Humano Computadora", "Matemáticas Discretas", "Cálculo II", "Álgebra Lineal", "Teoría General de Sistemas"],
@@ -28,46 +71,82 @@ const planDeEstudios = {
     9: ["Estancia profesional", "Seminario de Titulación"]
 };
 
-function cambiarSemestre(numeroSemestre) {
-    // Seleccionamos todos los círculos de la línea de tiempo
+window.cambiarSemestre = function(numeroSemestre) {
     let bolitas = document.querySelectorAll('.paso-tiempo');
-    
-    // Si no existen las bolitas, significa que no estamos en la página del plan de estudios y detenemos la función
     if(bolitas.length === 0) return;
 
-    // A) Quitamos el color activo a todos y se lo ponemos solo al que el usuario cliqueó
-    bolitas.forEach(bolita => bolita.classList.remove('paso-activo')); 
-    bolitas[numeroSemestre - 1].classList.add('paso-activo'); 
+    // Actualizamos visualmente el botón seleccionado
+    bolitas.forEach(b => b.classList.remove('paso-activo'));
+    bolitas[numeroSemestre - 1].classList.add('paso-activo');
 
-    // B) Limpiamos el contenedor donde aparecen las tarjetas
     let contenedor = document.getElementById('contenedor-materias');
-    contenedor.innerHTML = ""; 
+    contenedor.innerHTML = ""; // Limpiamos el HTML anterior
 
-    // C) Pintamos las materias del semestre seleccionado usando el diccionario
+    // Inyectamos las nuevas materias
     let materiasDelSemestre = planDeEstudios[numeroSemestre];
     materiasDelSemestre.forEach(materia => {
         contenedor.innerHTML += `
             <div class="tarjeta" style="display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px;">
-                <h4 style="margin: 0; color: var(--texto); font-family: Arial, sans-serif; font-size: 15px;">${materia}</h4>
+                <h4 style="margin: 0; color: #333333; font-family: Arial, sans-serif; font-size: 15px;">${materia}</h4>
             </div>
         `;
     });
 
-    // D) Mostrar u ocultar las optativas (Condicional para el 8vo Semestre)
+    // Lógica para mostrar/ocultar materias optativas (Solo en 8vo)
     let seccionOptativas = document.getElementById('seccion-optativas');
     if (seccionOptativas) {
-        if (numeroSemestre === 8) {
-            seccionOptativas.style.display = "block"; // Lo muestra
-        } else {
-            seccionOptativas.style.display = "none";  // Lo esconde
-        }
+        seccionOptativas.style.display = (numeroSemestre === 8) ? "block" : "none";
     }
-}
+};
 
-// 3. EVENTO DE INICIALIZACIÓN
-// Esperamos a que la página cargue por completo para pintar el Semestre 1 por defecto
-document.addEventListener("DOMContentLoaded", function() {
-    if (document.getElementById('contenedor-materias')) {
-        cambiarSemestre(1);
-    }
-});
+// ---------------------------------------------------------
+// PUNTOS EXTRA: CONSUMO DE API REAL (CLIMA EN IXTLÁN)
+// ---------------------------------------------------------
+function iniciarBotonAPI() {
+    // 1. Creación dinámica del botón
+    const botonApi = document.createElement('button');
+    botonApi.innerText = "🌦️ Clima UNSIJ"; 
+    
+    botonApi.style.cssText = "position: fixed; bottom: 20px; right: 20px; background-color: #064e3b; color: white; border: none; padding: 12px 20px; border-radius: 50px; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.2); z-index: 2000; font-weight: bold; font-family: Arial, sans-serif; transition: all 0.3s ease;";
+    
+    botonApi.onmouseover = () => botonApi.style.transform = "scale(1.1)";
+    botonApi.onmouseout = () => botonApi.style.transform = "scale(1)";
+
+    document.body.appendChild(botonApi);
+
+    // 2. Evento Click y Petición Async/Await
+    botonApi.addEventListener('click', async () => {
+        botonApi.innerText = "⏳ Consultando satélite..."; 
+
+        try {
+            // URL de la API del clima para Ixtlán de Juárez
+            const urlApi = 'https://wttr.in/Ixtlan de Juarez,Oaxaca?format=j1';
+            
+            const respuesta = await fetch(urlApi);
+            if (!respuesta.ok) throw new Error("Error en respuesta");
+            
+            const datos = await respuesta.json();
+
+            // Extraemos los datos útiles
+            const climaActual = datos.current_condition[0];
+            const tempC = climaActual.temp_C; 
+            const descripcion = climaActual.lang_es ? climaActual.lang_es[0].value : climaActual.weatherDesc[0].value;
+            const humedad = climaActual.humidity;
+
+            // Lógica sencilla para el emoji
+            let emojiTemp = "😐";
+            if (tempC < 15) emojiTemp = "🥶";
+            if (tempC >= 15 && tempC < 25) emojiTemp = "😊";
+            if (tempC >= 25) emojiTemp = "😓";
+
+            // Resultado final
+            alert(`🌦️ REPORTE DEL CLIMA EN LA UNSIJ 🏫\n\nEstado: ${descripcion.toUpperCase()}\nTemperatura: ${tempC}°C ${emojiTemp}\nHumedad: ${humedad}%\n\n¡Datos consultados en tiempo real!`);
+            
+        } catch (error) {
+            console.error(error);
+            alert("❌ Hubo un error al conectar con el satélite meteorológico. Inténtalo más tarde.");
+        } finally {
+            botonApi.innerText = "🌦️ Clima UNSIJ"; 
+        }
+    });
+}
