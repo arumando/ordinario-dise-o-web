@@ -1,8 +1,6 @@
-/* script principal - idssi unsij */
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    // validacion de formulario y evento submit
 // validacion de formulario y envio real a correo
 const formulario = document.getElementById("formulario-contacto");
 
@@ -71,8 +69,13 @@ if (formulario) {
         cambiarSemestre(1); 
     }
 
-    // inicializa el boton de la api para puntos extra
+    // inicializa el boton de la api
     iniciarBotonAPI();
+
+    // inicializa los modales de areas de especializacion
+    if (document.querySelector('.etiqueta-campo')) {
+        iniciarModalesLaborales();
+    }
 });
 
 
@@ -166,5 +169,69 @@ function iniciarBotonAPI() {
             // restauramos el icono original cuando termina
             botonApi.innerHTML = '<i class="fa-solid fa-cloud-sun" style="margin-right: 5px;"></i> Clima UNSIJ'; 
         }
+    });
+}
+
+function iniciarModalesLaborales() {
+    //todas las descripciones
+    const descripciones = {
+        "Científico de Datos": "Analiza grandes volúmenes de datos usando estadística y programación para extraer información clave que ayude en la toma de decisiones estratégicas de una empresa.",
+        "Ingeniero de ML": "Diseña, entrena y despliega modelos de Machine Learning (Aprendizaje Automático) para que los sistemas puedan aprender y mejorar sin ser programados explícitamente.",
+        "Arquitecto de IA": "Define la estructura general de los sistemas de inteligencia artificial, decidiendo qué tecnologías, servidores y algoritmos usar para resolver un problema a gran escala.",
+        "Especialista en NLP": "Desarrolla algoritmos que permiten a las computadoras entender, interpretar y generar lenguaje humano (como lo hace ChatGPT o Siri).",
+
+        "Arquitecto de Software": "Es el 'maestro de obra' del código. Toma decisiones de alto nivel sobre el diseño del sistema, las bases de datos y los estándares técnicos a seguir por los programadores.",
+        "DevOps Lead": "Une el desarrollo (Dev) con las operaciones (Ops). Automatiza la entrega de código, gestiona servidores en la nube y asegura que las actualizaciones no rompan el sistema.",
+        "Fullstack Expert": "Un desarrollador versátil que domina tanto la parte visual de una aplicación (Frontend) como la lógica oculta del servidor y las bases de datos (Backend).",
+        "QA Automation": "Escribe código cuyo único propósito es probar automáticamente el software de otros desarrolladores para encontrar errores (bugs) antes de que lleguen al usuario final.",
+
+        "Analista SOC": "Monitorea constantemente las redes y sistemas de una empresa desde un Centro de Operaciones de Seguridad para detectar y detener ciberataques en tiempo real.",
+        "Pentester": "Un 'hacker ético' contratado legalmente para intentar vulnerar los sistemas de una empresa y así encontrar sus fallos de seguridad antes de que lo haga un criminal.",
+        "Auditor Forense": "Investiga los ciberataques después de que ocurren. Rastrea la huella digital para descubrir cómo entraron los atacantes y qué información exacta fue comprometida.",
+        "Consultor CISO": "Asesora a las empresas sobre políticas de seguridad, cumplimiento de leyes de protección de datos y estrategias a nivel gerencial para proteger su información.",
+
+        "Ingeniero de Robótica": "Diseña, construye y programa robots físicos, integrando sensores, motores y código avanzado para que puedan interactuar con el mundo real de forma autónoma.",
+        "Especialista en IoT": "Conecta dispositivos cotidianos (desde sensores agrícolas hasta maquinaria industrial) a internet para recolectar datos masivos y controlarlos a distancia.",
+        "Control de Automatización": "Diseña y programa sistemas para que las fábricas y procesos industriales funcionen de manera automática, eficiente y con mínima intervención humana.",
+        "Desarrollador ROS": "Crea software utilizando el Robot Operating System (ROS), el estándar mundial para programar el 'cerebro' y la navegación de robots complejos."
+    };
+
+  
+    const modal = document.createElement('div');
+    modal.className = 'modal-overlay';
+    modal.innerHTML = `
+        <div class="modal-contenido">
+            <button class="modal-cerrar" title="Cerrar"><i class="fa-solid fa-xmark"></i></button>
+            <h3 id="modal-titulo" style="color: #064e3b; margin-top: 0; font-family: Arial, sans-serif; display: flex; align-items: center; gap: 10px;"></h3>
+            <p id="modal-desc" style="color: #4b5563; line-height: 1.6; margin-bottom: 0;"></p>
+        </div>
+    `;
+    document.body.appendChild(modal);
+
+    const etiquetas = document.querySelectorAll('.etiqueta-campo');
+    const btnCerrar = modal.querySelector('.modal-cerrar');
+    const titulo = modal.querySelector('#modal-titulo');
+    const desc = modal.querySelector('#modal-desc');
+
+    // 4. agregamos el evento clic a cada etiqueta
+    etiquetas.forEach(etiqueta => {
+        etiqueta.addEventListener('click', () => {
+            const cargo = etiqueta.innerText.trim();
+            
+            // inyectamos el titulo y la descripcion correspondiente
+            titulo.innerHTML = `<i class="fa-solid fa-circle-info"></i> ${cargo}`;
+            desc.innerText = descripciones[cargo] || "Descripción detallada no disponible por el momento.";
+            
+            // mostramos el modal
+            modal.classList.add('activo');
+        });
+    });
+
+    // 5. logica para cerrar el modal
+    btnCerrar.addEventListener('click', () => modal.classList.remove('activo'));
+    
+    // permite cerrar dando clic afuera de la cajita blanca
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.classList.remove('activo');
     });
 }
